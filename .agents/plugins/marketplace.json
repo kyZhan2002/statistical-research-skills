@@ -1,0 +1,20 @@
+{
+  "name": "statistical-research-skills",
+  "interface": {
+    "displayName": "Statistical Research Skills"
+  },
+  "plugins": [
+    {
+      "name": "statistical-research",
+      "source": {
+        "source": "local",
+        "path": "./plugins/statistical-research"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}

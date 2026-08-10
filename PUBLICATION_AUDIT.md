@@ -1,15 +1,9 @@
 # Publication-safety audit
 
-The reusable skills were checked for project-specific research content before preparing this public-distribution bundle.
+This repository was reviewed before packaging for public distribution.
 
-Not present in the skill files:
-- paper or project titles;
-- named unpublished methods;
-- project-specific theorem statements or proofs;
-- equations unique to a manuscript;
-- dataset/cohort names or private data descriptions;
-- unpublished numerical results;
-- reviewer text;
-- project-specific source paths such as a real manuscript or simulation directory.
+The reusable skills do not contain manuscript titles, project or method names, theorem statements, unpublished formulas or rates, datasets or cohort definitions, reviewer reports, unpublished numerical results, or paper-specific source paths. Platform manifests contain only generic metadata needed to expose the same four reusable research skills through Claude Code and Codex marketplaces.
 
-The skills do contain generic research preferences and generic statistical terminology, including journal names, proof-auditing concepts, simulation design principles, LaTeX conventions, and examples such as heteroskedasticity or low-rank structure. These are reusable workflow guidance rather than manuscript content.
+The skills necessarily contain generic statistical vocabulary and research-writing conventions. Examples include terms such as low rank, smoothness, heteroskedasticity, incoherence, Monte Carlo error, theorem assumptions, and simulation sensitivity. These are generic methodological concepts rather than project-specific research information.
+
+Project-specific facts should remain in each private research repository's local instructions rather than in this public reusable-skill repository.

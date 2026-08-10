@@ -1,6 +1,6 @@
 # Statistical Research Skills
 
-Reusable agent skills for statistical and biostatistical research. The repository contains no project-specific manuscript text, theorem statements, method names, datasets, unpublished numerical results, or paper-specific file paths.
+Reusable agent skills for statistical and biostatistical research. This repository is intentionally project-agnostic: it contains no manuscript-specific text, theorem statements, method names, datasets, unpublished numerical results, reviewer reports, or paper-specific paths.
 
 ## Included skills
 
@@ -9,61 +9,126 @@ Reusable agent skills for statistical and biostatistical research. The repositor
 - `statistical-simulation-writer`: code-grounded simulation design, auditing, interpretation, and paper writing.
 - `statistical-beamer-presenter`: intuitive, technically rigorous Beamer presentations for statistics audiences.
 
-## Claude Code: recommended installation
+The same canonical `skills/` directory is used by both Claude Code and Codex. Platform-specific marketplace and plugin manifests live beside it.
 
-This repository is a Claude Code plugin marketplace containing one plugin, `statistical-research`, which bundles all four skills.
-
-From Claude Code:
+## Repository layout
 
 ```text
-/plugin marketplace add YOUR_GITHUB_USERNAME/statistical-research-skills
-/plugin install statistical-research@statistical-research-skills
+.
+├── .claude-plugin/
+│   └── marketplace.json
+├── .agents/
+│   └── plugins/
+│       └── marketplace.json
+└── plugins/
+    └── statistical-research/
+        ├── .claude-plugin/
+        │   └── plugin.json
+        ├── .codex-plugin/
+        │   └── plugin.json
+        └── skills/
+            ├── statistical-manuscript-writer/
+            ├── statistical-proof-auditor/
+            ├── statistical-simulation-writer/
+            └── statistical-beamer-presenter/
 ```
 
-Or from the shell:
+## Claude Code installation
+
+Add the GitHub repository as a marketplace, then install the bundled plugin:
 
 ```bash
 claude plugin marketplace add YOUR_GITHUB_USERNAME/statistical-research-skills
 claude plugin install statistical-research@statistical-research-skills
 ```
 
-The plugin intentionally omits an explicit version. For a git-hosted marketplace, Claude Code can therefore use the source commit SHA for update detection. After pushing changes to GitHub, update manually with:
+Inside an interactive Claude Code session, the equivalent commands are:
 
 ```text
-/plugin marketplace update statistical-research-skills
-/plugin update statistical-research@statistical-research-skills
+/plugin marketplace add YOUR_GITHUB_USERNAME/statistical-research-skills
+/plugin install statistical-research@statistical-research-skills
 ```
 
-For hands-off personal use, open `/plugin`, select the marketplace, and enable auto-update. Third-party marketplaces may have auto-update disabled by default.
-
-Installed skill names are namespaced by the plugin, for example:
+Claude plugin skills are namespaced, for example:
 
 ```text
 /statistical-research:statistical-proof-auditor
 /statistical-research:statistical-manuscript-writer
 ```
 
-Claude can also invoke skills automatically when their descriptions match the task.
-
-## Local testing before pushing
+The Claude plugin manifest intentionally omits an explicit version. For a git-hosted marketplace, Claude Code can use the source commit SHA for version resolution. After pushing changes, refresh with:
 
 ```bash
-claude plugin validate .
-claude --plugin-dir ./plugins/statistical-research
+claude plugin marketplace update statistical-research-skills
 ```
 
-Inside Claude Code, test a skill and use `/reload-plugins` after edits when needed.
+You can also enable marketplace auto-update from `/plugin`.
 
-## Codex / other Agent Skills consumers
+## Codex installation
 
-The canonical skill folders are under:
+Codex reads the repository marketplace from `.agents/plugins/marketplace.json` and the plugin manifest from `plugins/statistical-research/.codex-plugin/plugin.json`.
+
+Add the GitHub repository as a marketplace:
+
+```bash
+codex plugin marketplace add YOUR_GITHUB_USERNAME/statistical-research-skills
+```
+
+Then install the plugin:
+
+```bash
+codex plugin add statistical-research@statistical-research-skills
+```
+
+You can also open Codex and use `/plugins` to find and install `Statistical Research` after adding the marketplace.
+
+To refresh the Git-backed marketplace after new commits:
+
+```bash
+codex plugin marketplace upgrade statistical-research-skills
+```
+
+Codex's plugin manifest uses semantic versioning. When you change any skill content that should be distributed as a new Codex plugin release, bump:
+
+```text
+plugins/statistical-research/.codex-plugin/plugin.json
+```
+
+For example, change `0.1.0` to `0.1.1`. Then commit and push. After upgrading the marketplace, Codex can recognize the newer plugin version.
+
+## Updating the skills
+
+Edit only the canonical files under:
 
 ```text
 plugins/statistical-research/skills/
 ```
 
-For a filesystem-based Agent Skills consumer, copy or symlink individual skill folders from there into that product's supported skills directory. This keeps one source of truth while allowing Claude Code to use marketplace installation.
+Do not maintain separate Claude and Codex copies of the skill instructions. The platform-specific manifests only point to the shared `skills/` tree.
+
+A normal update is:
+
+```bash
+# edit SKILL.md or references/*
+# bump the Codex plugin version, e.g. 0.1.0 -> 0.1.1
+
+git add .
+git commit -m "Improve statistical research skills"
+git push
+```
+
+Claude can track the new git commit. Codex should also receive a semantic-version bump in `.codex-plugin/plugin.json` to avoid stale plugin caches.
+
+## Local validation
+
+Validate Claude Code metadata when Claude Code is installed:
+
+```bash
+claude plugin validate .
+```
+
+For Codex, verify the marketplace/plugin files are valid JSON and use the current Codex plugin validator when available. The Codex manifest follows the current official layout: `.agents/plugins/marketplace.json` plus `plugins/<name>/.codex-plugin/plugin.json`.
 
 ## Keep project-specific context separate
 
-Do not put manuscript-specific facts in these reusable skills. Keep project-local facts in the repository's own instructions, such as `CLAUDE.md` or `AGENTS.md`: manuscript entrypoint, local macros, data/code directories, compute conventions, and project-specific notation.
+Keep manuscript-specific facts in each research repository's own project instructions, such as `CLAUDE.md` or `AGENTS.md`. Examples include manuscript entrypoints, project macros, data/code locations, compute conventions, and project-specific notation. Do not put those facts into these reusable public skills.
