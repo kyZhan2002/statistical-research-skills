@@ -1,0 +1,3 @@
+interface:
+  display_name: "Statistical Proof Auditor"
+  short_description: "Audit first, then write rigorous statistical theory proofs"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Statistical Manuscript Writer"
+  short_description: "Rigorous, source-grounded statistical paper writing in LaTeX"

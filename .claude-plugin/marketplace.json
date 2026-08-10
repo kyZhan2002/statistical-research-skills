@@ -1,0 +1,14 @@
+{
+  "name": "statistical-research-skills",
+  "owner": {
+    "name": "Statistical Research Skills"
+  },
+  "description": "Reusable skills for rigorous statistical manuscript writing, proof auditing, simulation studies, and Beamer presentations.",
+  "plugins": [
+    {
+      "name": "statistical-research",
+      "source": "./plugins/statistical-research",
+      "description": "A compact research workflow plugin containing four reusable statistical research skills."
+    }
+  ]
+}

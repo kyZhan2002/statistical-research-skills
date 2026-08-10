@@ -1,0 +1,6 @@
+{
+  "name": "statistical-research",
+  "displayName": "Statistical Research",
+  "description": "Rigorous reusable workflows for statistical manuscript writing, proof auditing, simulation studies, and Beamer presentations.",
+  "keywords": ["statistics", "biostatistics", "latex", "proofs", "simulation", "beamer"]
+}
