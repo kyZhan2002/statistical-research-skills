@@ -1,6 +1,6 @@
 {
   "name": "statistical-research",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rigorous reusable workflows for statistical manuscript writing, proof auditing, simulation studies, and Beamer presentations.",
   "author": {
     "name": "Statistical Research Skills"
