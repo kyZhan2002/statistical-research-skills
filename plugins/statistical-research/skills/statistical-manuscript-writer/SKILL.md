@@ -46,7 +46,9 @@ Preserve the manuscript's established notation. Simplify exposition by removing 
 
 ### Abstract, introduction, and related work
 
-Make the problem and principal advance apparent early. Build the introduction around the statistical difficulty, the key idea, and the results that support it. Group literature by ideas and explain how the present work advances that conversation. Keep the abstract focused on the question, contribution, principal evidence, and implication, using as little notation as possible. Match the strength and scope of its claims to the body of the paper.
+Open the abstract with concise, problem-specific background and an explanation of why the statistical question matters. Then describe the key idea, principal contributions, and their implications at a high level. Use mathematical notation only when essential to communicate the contribution accurately. Avoid opening with a formal model, parameter definitions, assumption lists, or technical rates. Express the scope in accessible words where possible, while matching the strength of the claims to the body of the paper.
+
+Let the introduction develop from the background and importance of the problem to the statistical difficulty, the opportunity for an advance, and the paper's key idea. In the contribution discussion, include concise formal definitions when they make the advance clear and precise. State a convergence rate or other quantitative guarantee when it is a main contribution, and explain its significance and the meaning of its symbols. Integrate this formal detail with the conceptual explanation rather than requiring a separate informal account of every contribution. Usually leave assumptions and their detailed statements to the methods or theory section. Include only a brief scope qualification or cross-reference when needed to keep a contribution claim accurate. Group literature by ideas and explain how the present work advances that conversation. Keep the opening concise and specific rather than padding it with generic motivation.
 
 ### Methods and theory exposition
 
