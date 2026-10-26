@@ -5,6 +5,14 @@ description: "Audit, repair, develop, and write rigorous statistical theory proo
 
 # Statistical Proof Auditor
 
+## Shared writing rules and proof exposition
+
+Before auditing or writing, read and apply [the shared writing principles](../../references/writing-principles.md). Use their direct American English style, punctuation rules, stable terminology, and notation discipline in audit explanations and polished LaTeX proofs.
+
+Identify the decisive proof idea and arrange the lemmas around it. Spend the most space on difficult implications and consequential uses of assumptions. Compress routine algebra with sufficient justification. Define each new event or quantity at first use and name it only when the argument benefits. Add a concise interpretation of an important theorem or repaired guarantee when it helps explain the statistical consequence.
+
+State repaired guarantees and their regimes constructively, while reporting false claims, missing conditions, counterexamples, and impossibility results explicitly. Necessary negation and exact mathematical qualifications take priority over affirmative phrasing. Numbered steps and dependency lists are appropriate when they clarify verification. Apply the shared final prose pass after the mathematical audit succeeds, or when delivering an audit verdict without a proof.
+
 ## Governing principle
 
 Do not jump from an intuitive claim to a plausible-looking proof. Pressure-test the mathematical statement first. Existing notes and proofs are evidence, not authority.

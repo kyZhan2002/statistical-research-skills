@@ -56,13 +56,14 @@ Claude plugin skills are namespaced, for example:
 /statistical-research:statistical-manuscript-writer
 ```
 
-The Claude plugin manifest intentionally omits an explicit version. For a git-hosted marketplace, Claude Code can use the source commit SHA for version resolution. After pushing changes, refresh with:
+The Claude and Codex plugin manifests use the same explicit release version. After pushing changes, refresh the marketplace and update the installed Claude plugin:
 
 ```bash
 claude plugin marketplace update statistical-research-skills
+claude plugin update statistical-research@statistical-research-skills
 ```
 
-You can also enable marketplace auto-update from `/plugin`.
+Start a new Claude Code session or run `/reload-plugins`. You can also enable marketplace auto-update from `/plugin`.
 
 ## Codex installation
 
@@ -86,15 +87,17 @@ To refresh the Git-backed marketplace after new commits:
 
 ```bash
 codex plugin marketplace upgrade statistical-research-skills
+codex plugin add statistical-research@statistical-research-skills
 ```
 
-Codex's plugin manifest uses semantic versioning. When you change any skill content that should be distributed as a new Codex plugin release, bump:
+Restart Codex and start a new conversation after updating. When you change skill content for a new release, bump both manifests to the same semantic version:
 
 ```text
 plugins/statistical-research/.codex-plugin/plugin.json
+plugins/statistical-research/.claude-plugin/plugin.json
 ```
 
-For example, change `0.1.0` to `0.1.1`. Then commit and push. After upgrading the marketplace, Codex can recognize the newer plugin version.
+For example, change `0.1.1` to `0.1.2`. Then commit and push so other devices can fetch the new release.
 
 ## Updating the skills
 
@@ -106,18 +109,20 @@ plugins/statistical-research/skills/
 
 Do not maintain separate Claude and Codex copies of the skill instructions. The platform-specific manifests only point to the shared `skills/` tree.
 
+Common writing guidance lives in `plugins/statistical-research/references/writing-principles.md`. Each skill explicitly reads this reference and adapts it to its own task. Keep the plugin directory intact when installing or copying it manually so these relative references resolve. Update the shared reference for common prose rules and each `SKILL.md` for task-specific behavior.
+
 A normal update is:
 
 ```bash
 # edit SKILL.md or references/*
-# bump the Codex plugin version, e.g. 0.1.0 -> 0.1.1
+# bump both plugin versions, e.g. 0.1.1 -> 0.1.2
 
 git add .
 git commit -m "Improve statistical research skills"
 git push
 ```
 
-Claude can track the new git commit. Codex should also receive a semantic-version bump in `.codex-plugin/plugin.json` to avoid stale plugin caches.
+Keep the two manifest versions synchronized so both clients recognize the release.
 
 ## Local validation
 

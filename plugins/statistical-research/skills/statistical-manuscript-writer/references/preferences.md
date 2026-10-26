@@ -38,6 +38,32 @@ Supply the most informative verified numerical comparison if needed to assess th
 
 Avoid "One comparison per setting" or other allocation slogans as results narration. Explain what the comparison reveals. Keep genuine design facts, such as repeated measurements per subject, precise.
 
+## Replace emphasis with evidence
+
+Before: "Additionally, an enduring testament to the method's value is its ability to delve into intricate dependencies, showcasing a seamless integration that underscores its pivotal role."
+
+After, if the comparison is verified: "The method also captures higher-order dependencies, which the baselines miss (Table~\ref{tab:dependencies})."
+
+Before: "It is worth noting that, importantly, the gain holds across scenarios."
+
+After, if all three scenarios support the claim: "The gain holds across all three scenarios (Table~\ref{tab:scenarios})."
+
+The revised claims require evidence. Stylistic editing alone does not establish a baseline failure, a scenario count, or consistency across settings. Replace illustrative labels with the project's actual labels.
+
+## Split stacked clauses and integrate modifiers
+
+Before: "The estimator reduces error in sparse settings, which are common in the application, while retaining nominal coverage, with the largest gains occurring at small sample sizes, which supports its use when information is scarce."
+
+After, when supported: "The estimator reduces error in sparse settings while retaining nominal coverage. The gains are largest at small sample sizes, supporting its use when information is scarce."
+
+Retain the application-specific qualification separately if it matters to the argument and has supporting evidence. Splitting a sentence should clarify which evidence supports each claim.
+
+Before: "This approach, while effective in many settings, may struggle with highly heterogeneous data."
+
+Direct syntax with the same qualification: "Although this approach is effective in many settings, it may struggle with highly heterogeneous data."
+
+When the manuscript identifies the relevant conditions, replace vague phrases such as "many settings" with those conditions. Preserve a material qualification while giving the supported contribution its proper emphasis.
+
 ## External examples considered
 
 The author's requirements govern this skill. Two external skills informed selective checks, expressed here in the manuscript writer's own workflow:

@@ -5,6 +5,14 @@ description: "Design, audit, revise, and write simulation studies for statistica
 
 # Statistical Simulation Writer
 
+## Shared writing rules and empirical exposition
+
+Before designing, interpreting, or writing a study, read and apply [the shared writing principles](../../references/writing-principles.md). Apply their direct American English style, punctuation rules, stable terminology, and notation discipline to plans, reports, captions, and LaTeX sections. Preserve programming syntax and identifiers in code.
+
+Build the results narrative around the statistical question and the method's demonstrated strengths. Select informative comparisons with consistent metrics and comparators instead of narrating every panel or favoring only the largest gain. State material reversals, uncertainty, and conditions of advantage. Separate observed patterns from proposed explanations when the mechanism has not been established.
+
+Read each caption before writing its interpretation. Keep visual and setup descriptions in the caption, and use the main text for the takeaway and its significance. Define new metrics and symbols before use. Present results in natural paragraphs without counting slogans or padded lists. Experiment-design tables and reproducibility checklists remain appropriate. Apply the shared final prose pass alongside the experiment audit.
+
 ## Core objective
 
 Build simulation evidence that answers a statistical question rather than merely producing favorable plots. The simulation story must be reproducible, comparable across settings, and aligned with the theory.
@@ -28,7 +36,7 @@ Treat manuscript descriptions as potentially stale. Never infer a parameter valu
 5. Link each experiment to one purpose: finite-sample accuracy, rate behavior, robustness, sensitivity, ablation, tuning, computational cost, or reviewer concern.
 6. For new designs, vary parameters that isolate mechanisms predicted by the theory rather than arbitrary grids.
 7. Quantify Monte Carlo uncertainty with standard errors, error bars, confidence intervals, or distribution summaries when repeated runs are available.
-8. Interpret the results mechanistically. Explain why a curve changes and which theoretical quantity it reflects.
+8. Interpret the results mechanistically when supported. Explain the relationship to theory, and distinguish a plausible explanation from an experimentally isolated mechanism.
 9. Write the manuscript section from the verified setup and outputs.
 10. Preserve original simulations when the task is a revision unless replacing them is necessary; prefer clearly organized supplements or extensions and retain archived originals.
 

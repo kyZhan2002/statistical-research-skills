@@ -5,6 +5,10 @@ description: "Draft, revise, or polish statistical and biostatistical research p
 
 # Statistical Manuscript Writer
 
+## Shared writing rules
+
+Before drafting or revising, read and apply [the shared writing principles](../../references/writing-principles.md). They govern the prose in this skill, including punctuation, American spelling, direct language, notation, contribution framing, and numerical interpretation. The guidance below specializes them for a LaTeX manuscript. For revision examples, consult [references/preferences.md](references/preferences.md).
+
 ## Core objective
 
 Write natural, precise LaTeX prose suitable for a leading statistics journal such as the Annals of Statistics. Give readers a clear, interesting mathematical story: the statistical question, the idea that advances it, the evidence supporting that advance, and why it matters. State contributions strongly and specifically, with their assumptions and scope intact. Correctness and an engaging narrative should reinforce each other.
@@ -28,7 +32,7 @@ Frame scope affirmatively. Replace defensive formulations such as "cannot do X",
 
 In literature comparisons, explain the contribution relative to prior work along a relevant axis: problem, assumptions, regime, guarantee, statistical accuracy, or computation. State the prior result fairly and identify the supported extension or complementary advance. Compare like quantities under comparable conditions; a smaller upper bound alone does not establish that one estimator outperforms another. Verify priority claims such as "first" or "no prior work" before using them.
 
-Use natural transitions grounded in the argument. Do not introduce results with "Three findings stand out", "One finding per setting", "One xxx per yyy", or similar counting and allocation formulas. Lead with the substantive finding itself. This preference concerns rhetorical presentation; precise design descriptions such as the number of observations per subject remain appropriate. Avoid em dashes unless the source style requires them.
+Use natural transitions grounded in the argument. Do not introduce results with "Three findings stand out", "One finding per setting", "One xxx per yyy", or similar counting and allocation formulas. Lead with the substantive finding itself. This preference concerns rhetorical presentation; precise design descriptions such as the number of observations per subject remain appropriate.
 
 ## Economical definitions and notation
 
@@ -88,6 +92,6 @@ Before returning the revision, check:
 1. **Story:** The central contribution is clear, and the selected results advance it through a coherent argument.
 2. **Notation:** Every new definition earns its place; symbols are defined at first use or in an earlier, clearly identified notation paragraph or subsection, their roles are clear, and existing conventions are preserved.
 3. **Claims:** Contributions are direct and constructive, with exact assumptions and regimes; comparisons and empirical statements match the evidence.
-4. **Exposition:** Important results receive useful, concise interpretation; numerical takeaways complement captions; proof detail concentrates on the decisive and difficult steps. Empirical claims retain sufficient evidence and any tradeoff that changes their interpretation.
+4. **Exposition:** Important results receive useful, concise interpretation, numerical takeaways complement captions, and proof detail concentrates on the decisive and difficult steps. Apply the shared writing principles: check spelling, punctuation, sentence structure, stable terminology, and evidence in place of filler. Empirical claims retain sufficient evidence and any tradeoff that changes their interpretation.
 5. **Consistency:** Relevant abstract, body, captions, and supplement agree on claims, settings, and numbers. Recompute derived numerical comparisons when inputs are available; account for rounding and different experimental settings. Search relevant sources before claiming something is absent, and inspect the rendered equation if a suspected error could come from PDF extraction.
 6. **LaTeX and sources:** Labels, citations, mathematical syntax, and dependencies are sound for the supplied context. State only the checks actually completed and identify unresolved issues precisely.

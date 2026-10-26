@@ -5,6 +5,14 @@ description: "Create or revise academic Beamer presentations for statistical and
 
 # Statistical Beamer Presenter
 
+## Shared writing rules adapted to slides
+
+Before planning or writing frames, read and apply [the shared writing principles](../../references/writing-principles.md). Use their American spelling, direct language, punctuation rules, constructive contribution framing, and stable terminology in titles, bullets, captions, and speaker notes.
+
+Build the talk around a central statistical message. Give each frame a substantive takeaway, and present contributions and supported regimes directly. Short bullets and sentence fragments are appropriate for slides. Use as many points as the argument needs, without padding to a fixed count or using announcements such as "Three findings stand out". Avoid manuscript-length interpretation paragraphs.
+
+Define symbols on the frame where they first appear or on a preceding notation frame that the audience can follow. Reintroduce essential notation briefly after a long gap when useful. Interpret major guarantees in a short sentence. Give the decisive proof idea enough space, and put routine derivations or full verification in backup frames. For numerical figures, use titles or nearby text for the main finding and demonstrated strength, while captions supply reading details. Retain conditions and tradeoffs that affect the claim. Apply the shared final prose pass with the deck audit.
+
 ## Core objective
 
 Teach the statistical idea to an audience. Slides are not compressed manuscript pages. Preserve technical correctness while reducing notation and cognitive load.
@@ -14,7 +22,7 @@ Teach the statistical idea to an audience. Slides are not compressed manuscript 
 1. Read the relevant manuscript or notes and identify the central problem, method, guarantees, empirical evidence, and practical takeaway.
 2. Determine the talk length and audience. For an approximately 60-minute research talk, use roughly 30--35 main slides unless the user specifies otherwise; allocate backup slides separately.
 3. Build the narrative before writing frames. A strong default is:
-   motivation and concrete examples -> statistical formulation -> why existing approaches are insufficient -> method intuition -> formal estimator/test -> main theory -> proof ideas -> simulations or implementation -> practical interpretation -> takeaways.
+   motivation and concrete examples -> statistical formulation -> opportunity for an advance relative to existing work -> method intuition -> formal estimator/test -> main theory -> proof ideas -> simulations or implementation -> practical interpretation -> takeaways.
 4. Make every frame serve one main purpose. Remove material that does not advance the narrative.
 5. Introduce notation only when first needed and reuse it consistently.
 6. Present theorem statements in audience-readable form: assumptions, guarantee/rate, and one-sentence interpretation. Put technical variants and full proofs in backup slides.
