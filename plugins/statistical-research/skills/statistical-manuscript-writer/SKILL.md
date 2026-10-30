@@ -32,7 +32,7 @@ Frame scope affirmatively. Replace defensive formulations such as "cannot do X",
 
 In literature comparisons, explain the contribution relative to prior work along a relevant axis: problem, assumptions, regime, guarantee, statistical accuracy, or computation. State the prior result fairly and identify the supported extension or complementary advance. Compare like quantities under comparable conditions; a smaller upper bound alone does not establish that one estimator outperforms another. Verify priority claims such as "first" or "no prior work" before using them.
 
-Use natural transitions grounded in the argument. Do not introduce results with "Three findings stand out", "One finding per setting", "One xxx per yyy", or similar counting and allocation formulas. Lead with the substantive finding itself. This preference concerns rhetorical presentation; precise design descriptions such as the number of observations per subject remain appropriate.
+Use natural transitions grounded in the argument. Do not introduce results with "Three findings stand out", "One finding per setting", "One xxx per yyy", "Three XXX, one YYY" or similar counting and allocation formulas. Lead with the substantive finding itself. This preference concerns rhetorical presentation; precise design descriptions such as the number of observations per subject remain appropriate.
 
 ## Economical definitions and notation
 
@@ -85,7 +85,7 @@ Read [Statistical LaTeX Style](../../references/latex-style.md) before editing L
 - Return copy-paste-ready LaTeX for requested manuscript text; preserve macros, citation commands, labels, theorem environments, and the existing `\input`/`\include` structure. Follow the paper's document class and package choices.
 - For a focused revision, preserve the package setup and global notation. Add dependencies or macros when creating a template or carrying out a requested style conversion, following the shared LaTeX conventions. Use the project's existing reference commands and citation keys and verify that targets exist and support the sentence.
 - Prefer inline `$...$` for short expressions and display mathematics for statements that need emphasis or alignment. Punctuate equations as part of their sentences. Keep each prose paragraph on one source line when practical.
-- Do not use `\begin{paragraph}`. Preserve valid sectioning commands already used by the project; do not introduce unnecessary headings to fragment connected prose.
+- Do not use `\begin{paragraph}` or `\paragraph{}`. Instead, use natural language to summarize and connect paragraphs. Preserve valid sectioning commands already used by the project; do not introduce unnecessary headings to fragment connected prose.
 - Never invent bibliography entries, DOIs, theorem numbers, sample sizes, numerical results, assumptions, or dataset facts. Verify new literature claims against original papers or authoritative journal sources. Report unresolved source questions outside the proposed manuscript text.
 - When editing a complete LaTeX project, use its existing build command if available and inspect relevant errors and unresolved references. For isolated snippets, check syntax and compatibility with supplied macros. Distinguish a successful build from a source-only check; compilation does not verify the mathematics.
 
