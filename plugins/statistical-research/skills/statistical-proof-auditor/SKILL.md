@@ -52,6 +52,8 @@ If a proof relies on a published lemma or known theorem, verify the source and c
 
 ## LaTeX contract
 
+Read [Statistical LaTeX Style](../../references/latex-style.md) when writing or revising the proof. Split derivations into justified blocks of at most three lines, using `align` or `align*` for multiline mathematics. Define auxiliary quantities only when they clarify the argument. Preserve estimator meanings when simplifying accents or indices, explain substantive assumptions, and check equation punctuation and references. Typesetting changes never substitute for verifying a mathematical step.
+
 - Return clear journal-quality LaTeX when a proof is requested.
 - Preserve theorem, lemma, equation, and appendix labels where possible.
 - Do not use `\begin{paragraph}`.

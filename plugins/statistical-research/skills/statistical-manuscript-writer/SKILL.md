@@ -80,8 +80,10 @@ Answer each reviewer concern directly, explain the actual change or evidence, an
 
 ## LaTeX contract
 
+Read [Statistical LaTeX Style](../../references/latex-style.md) before editing LaTeX. Apply its three-line display limit, equation punctuation, notation conventions, citation grammar, and figure/table checks. For new manuscripts, use its bibliography and macro defaults when compatible with the venue. For existing papers, inspect the actual preamble and preserve established mathematical conventions. Interpret assumptions where useful and verify the rendered material affected by the edit.
+
 - Return copy-paste-ready LaTeX for requested manuscript text; preserve macros, citation commands, labels, theorem environments, and the existing `\input`/`\include` structure. Follow the paper's document class and package choices.
-- Introduce no package, macro, or global notation change solely to satisfy a stylistic preference. Use the project's existing reference commands and citation keys; verify that targets exist and support the sentence.
+- For a focused revision, preserve the package setup and global notation. Add dependencies or macros when creating a template or carrying out a requested style conversion, following the shared LaTeX conventions. Use the project's existing reference commands and citation keys and verify that targets exist and support the sentence.
 - Prefer inline `$...$` for short expressions and display mathematics for statements that need emphasis or alignment. Punctuate equations as part of their sentences. Keep each prose paragraph on one source line when practical.
 - Do not use `\begin{paragraph}`. Preserve valid sectioning commands already used by the project; do not introduce unnecessary headings to fragment connected prose.
 - Never invent bibliography entries, DOIs, theorem numbers, sample sizes, numerical results, assumptions, or dataset facts. Verify new literature claims against original papers or authoritative journal sources. Report unresolved source questions outside the proposed manuscript text.

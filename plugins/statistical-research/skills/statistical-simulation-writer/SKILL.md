@@ -60,7 +60,11 @@ When a theory bound contains a dimension-dependent estimation term, design diagn
 
 For codebase work, keep simulation scripts, configurations, outputs, and figures separable. Use deterministic seeds and configuration-driven runs when possible. On clusters, choose resources based on actual memory/CPU needs, avoid duplicate jobs, and record job settings needed for reproducibility.
 
+Save result objects before plotting and provide a single plotting entrypoint so figures can be revised without rerunning experiments. For new R workflows, use `.RData` for saved results. Preserve an existing reproducible format and use native equivalents outside R. Export plots directly to vector PDF, verify every legend and error-bar description against the output, and use tables with minimal rules and no outer vertical borders.
+
 ## LaTeX contract
+
+Read [Statistical LaTeX Style](../../references/latex-style.md) before drafting the simulation section or revising its displays. Apply the metric-notation, equation, citation, and figure/table conventions. Use present tense to describe the study and its findings, with active voice where natural. Keep captions descriptive and the main text interpretive. Check that PDF export preserves readable labels and that the plotting entrypoint reproduces the delivered figures when execution is in scope.
 
 When writing the paper section, produce copy-paste-ready LaTeX in the manuscript's notation. Do not use `\begin{paragraph}`. Prefer concise prose, inline math for short quantities, and one prose paragraph per source line when practical. Figure references and descriptions must match the actual panels.
 

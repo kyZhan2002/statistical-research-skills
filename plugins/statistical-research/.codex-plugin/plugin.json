@@ -1,7 +1,7 @@
 {
   "name": "statistical-research",
-  "version": "0.1.3",
-  "description": "Rigorous reusable workflows for statistical manuscript writing, proof auditing, simulation studies, and Beamer presentations.",
+  "version": "0.2.0",
+  "description": "Rigorous reusable workflows for statistical manuscript writing, proof auditing, simulation studies, and Beamer or PowerPoint presentations.",
   "author": {
     "name": "Statistical Research Skills"
   },
@@ -18,7 +18,7 @@
   "interface": {
     "displayName": "Statistical Research",
     "shortDescription": "Rigorous workflows for statistical papers, proofs, simulations, and slides",
-    "longDescription": "Use Statistical Research to write and revise statistical manuscripts, audit and develop proofs, design and interpret simulation studies, and build clear Beamer presentations with source-grounded, verification-first research workflows.",
+    "longDescription": "Use Statistical Research to write and revise statistical manuscripts, audit and develop proofs, design and interpret simulation studies, and build clear Beamer or PowerPoint presentations with source-grounded, verification-first research workflows.",
     "developerName": "Statistical Research Skills",
     "category": "Education & Research",
     "capabilities": ["Interactive", "Read", "Write"],

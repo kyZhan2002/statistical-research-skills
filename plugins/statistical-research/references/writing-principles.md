@@ -1,6 +1,8 @@
 # Shared statistical writing principles
 
-Read this reference whenever using any of the four statistical research skills. Apply it to authored prose, explanations, captions, and slide text. The invoking skill determines the deliverable and level of detail. Preserve mathematical meaning, exact quotations, bibliographic records, and executable syntax.
+Read this reference whenever using any statistical research skill in this plugin. Apply it to authored prose, explanations, captions, and slide text. The invoking skill determines the deliverable and level of detail. Preserve mathematical meaning, exact quotations, bibliographic records, and executable syntax.
+
+For LaTeX drafting or revision, also read [Statistical LaTeX Style](latex-style.md) and apply its relevant conventions for notation, equations, citations, theorem environments, and graphics.
 
 ## Central message and supported contributions
 
@@ -30,7 +32,13 @@ Avoid mechanical narration such as "Three findings stand out", "One finding per 
 
 Use American English spelling, such as "analyze" and "modeling", unless the paper's style guide explicitly requires another variety. Preserve exact quotations, bibliographic titles, and code identifiers.
 
-Never use em dashes in authored manuscript prose, including Unicode em dashes, LaTeX `---`, and `\textemdash`. Recast the sentence with commas, a colon, parentheses, or separate sentences. Minimize semicolons: prefer a period or a direct conjunction when it expresses the relationship clearly. Preserve semicolons with mathematical meaning, such as parameter separators in notation.
+Use present tense for literature review and descriptions of the paper's methods, results, and contributions: "The authors establish ...", "We generate ...", and "This paper shows ...". Present perfect is appropriate when emphasizing an established contribution, as in "The authors have shown ...". Preserve past tense where a genuinely historical event or chronology requires it. Prefer active voice with an explicit subject, while retaining passive voice when the object is the natural focus or the agent is immaterial.
+
+Avoid contractions and informal shorthand such as "a.k.a.", "w.r.t.", and "Fig." in authored prose. Write "also known as", "with respect to", and "Figure". Use abbreviations accurately: "e.g.," introduces examples, "cf." means compare, and "resp." means respectively. Prefer the full word when it improves readability. Supply commas where grammar requires them rather than appending a comma mechanically to every abbreviation. Avoid "etc." when it leaves an essential mathematical list unspecified.
+
+Keep capitalization consistent. For new section or subsection titles and named concept headings, use Title Case unless the venue specifies another convention. Preserve established proper names, acronyms, and mathematical case distinctions. Use paired LaTeX quotation marks (two backticks to open and two apostrophes to close), or the project's quotation macro, rather than straight double quotes. Complete sentences require periods, including those ending with displayed mathematics. Slide fragments follow a consistent slide punctuation style.
+
+Never use em dashes in authored prose, including slide text and notes, including Unicode em dashes, LaTeX `---`, and `\textemdash`. Recast the sentence with commas, a colon, parentheses, or separate sentences. Minimize semicolons: prefer a period or a direct conjunction when it expresses the relationship clearly. Preserve semicolons with mathematical meaning, such as parameter separators in notation.
 
 Prefer direct subjects and verbs. Use "is" or "are" instead of "serves as" or "acts as" when the meaning is simply identity or description. Remove filler such as "it is worth noting that", "it should be emphasized that", and "in order to". Avoid boilerplate emphasis such as "Notably," and "Importantly,". Let the result and its evidence establish its importance.
 

@@ -8,6 +8,7 @@ Reusable agent skills for statistical and biostatistical research. This reposito
 - `statistical-proof-auditor`: audit-before-proof theorem development and proof verification.
 - `statistical-simulation-writer`: code-grounded simulation design, auditing, interpretation, and paper writing.
 - `statistical-beamer-presenter`: intuitive, technically rigorous Beamer presentations for statistics audiences.
+- `statistical-powerpoint-presenter`: clean, editable academic PowerPoint decks with native slide objects.
 
 The same canonical `skills/` directory is used by both Claude Code and Codex. Platform-specific marketplace and plugin manifests live beside it.
 
@@ -30,7 +31,8 @@ The same canonical `skills/` directory is used by both Claude Code and Codex. Pl
             ├── statistical-manuscript-writer/
             ├── statistical-proof-auditor/
             ├── statistical-simulation-writer/
-            └── statistical-beamer-presenter/
+            ├── statistical-beamer-presenter/
+            └── statistical-powerpoint-presenter/
 ```
 
 ## Claude Code installation
@@ -110,6 +112,10 @@ plugins/statistical-research/skills/
 Do not maintain separate Claude and Codex copies of the skill instructions. The platform-specific manifests only point to the shared `skills/` tree.
 
 Common writing guidance lives in `plugins/statistical-research/references/writing-principles.md`. Each skill explicitly reads this reference and adapts it to its own task. Keep the plugin directory intact when installing or copying it manually so these relative references resolve. Update the shared reference for common prose rules and each `SKILL.md` for task-specific behavior.
+
+Shared LaTeX conventions live in `plugins/statistical-research/references/latex-style.md`. The manuscript, proof, simulation, and Beamer skills read this reference for LaTeX work, including notation, short aligned derivations, bibliography conventions, and reproducible PDF graphics. New-document defaults respect venue requirements, and focused edits preserve established project notation and dependencies.
+
+Both presentation skills read `plugins/statistical-research/references/presentation-principles.md` for narrative, readability, and review. Beamer uses LaTeX conventions; PowerPoint uses editable native objects and format-specific validation. Neither uses tiny explanatory footnotes.
 
 A normal update is:
 

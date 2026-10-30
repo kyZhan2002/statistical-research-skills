@@ -1,13 +1,10 @@
-# Beamer deck audit
+# Beamer Deck Audit
 
-Before finalizing, check:
-- the first five slides establish problem, data structure, and motivation;
-- each slide has one identifiable takeaway;
-- notation is introduced before use and remains consistent;
-- the method can be explained verbally from the slides without reading paragraphs;
-- the main theorem has an interpretation, not just a formula;
-- proof slides show ideas and dependencies rather than full derivations;
-- the final test/algorithm is explicit enough to implement;
-- figures and examples support the stated structural assumptions;
-- main deck fits the requested time; technical overflow goes to backup;
-- the `.tex` file is syntactically plausible and self-consistent.
+Apply after the shared presentation review:
+
+1. Font choices are engine-compatible, and `\usefonttheme{professionalfonts}` preserves the selected fonts in new decks.
+2. Body text, equations, plot labels, and captions are readable. No tiny explanatory footnotes, top strips, or frame-shrink workarounds remain.
+3. Every displayed derivation fits within three lines, with essential conditions visible and full derivations in backup frames as needed.
+4. Macros, environments, labels, citations, and bibliography dependencies resolve under the actual compilation command.
+5. All frames and intended overlay states have been rendered and visually inspected when the toolchain is available.
+6. Delivered source and required assets support reuse, and any unavailable compilation or rendering checks are reported accurately.
